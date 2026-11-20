@@ -167,13 +167,13 @@ public class EmergencyRoomGUI {
                 FontMetrics fmStats = g2d.getFontMetrics();
 
                 // Get stats from area
-               // int numPatients = area.getNumPatients();
-               //int capacity = area.getCapacity();
-               // int waiting = area.getWaiting();
+               int numPatients = area.getNumPatients();
+               int capacity = area.getCapacity();
+               int waiting = area.getWaiting();
 
                 // Format strings
-                //String occupancyStr = String.format("Capacity: %d / %d", numPatients, capacity);
-                //String waitingStr = String.format("Waiting: %d", waiting);
+                String occupancyStr = String.format("Capacity: %d / %d", numPatients, capacity);
+                String waitingStr = String.format("Waiting: %d", waiting);
 
                 // Calculate positions at the bottom of the box
                 int occupancyTextX = x + (AREA_SIZE - fmStats.stringWidth(occupancyStr)) / 2 + 2;
