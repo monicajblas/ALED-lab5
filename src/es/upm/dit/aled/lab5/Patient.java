@@ -164,7 +164,13 @@ public class Patient extends Thread {
 	 */
 	@Override
 	public void run() {
-		// TODO
+		while(true) {
+			location.enter(this);
+			attendedAtLocation();
+			location.exit(this);
+			advanceProtocol();
+			//volver al paso 1?????????
+		}
 	}
 
 }
