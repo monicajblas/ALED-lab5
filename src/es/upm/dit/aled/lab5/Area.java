@@ -100,13 +100,14 @@ public class Area {
 	 * @param p The patient that wants to enter.
 	 */
 	public synchronized void enter(Patient p) {
-		waiting++;
-		while(numPatients >= capacity) 
+		this.waiting++;
+		while(this.numPatients >= this.capacity) {
 			try {
 				wait();
 			} catch(InterruptedException e) { }
-		waiting--;
-		numPatients++; 	
+		}	
+		this.waiting--;
+		this.numPatients++; 
 	}
 	
 	/**
