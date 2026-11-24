@@ -21,6 +21,7 @@ public class AreaQueue extends Area {
 		this.waitQueue = new LinkedList<Patient>();
 	}
 
+	
 	@Override
 	public synchronized void enter(Patient p) {
 		this.waiting++;
